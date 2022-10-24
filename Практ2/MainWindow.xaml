@@ -1,0 +1,47 @@
+﻿<Window x:Class="Практ2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Практ2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FF0E119E" Offset="1"/>
+            <GradientStop Color="#FF11BD92" Offset="0.503"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Menu HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="792" Background="Transparent" Foreground="White" Grid.ColumnSpan="2">
+            <MenuItem Header="Меню">
+                <MenuItem.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF18BB47" Offset="0.58"/>
+                        <GradientStop Color="#FF0C0E86" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Background>
+                <MenuItem Header="О программе" Name="AboutProg" Click="AboutProg_Click" Foreground="Black"/>
+                <Separator></Separator>
+                <MenuItem Header="Очистка" Name="ClearProg" Click="Ochistka_Click" Foreground="Black"/>
+                <MenuItem Header="Сохранить" Name="SaveMas" Click="SaveMas_Click" Foreground="Black"/>
+                <MenuItem Header="Записать" Name="LoadMas" Click="LoadMas_Click" Foreground="Black"/>
+                
+                <Separator></Separator>
+                <MenuItem Header="Выход" Name="ExitProg" Click="ExitProg_Click" Foreground="Black"/>
+            </MenuItem>
+        </Menu>
+        <DataGrid x:Name="DataG1" IsReadOnly="True" Margin="10,23,10,217"/>
+        <TextBox x:Name="Stolb" HorizontalAlignment="Left" Height="36" Margin="24,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64"/>
+        <Label Content="Задайте размерность массива" HorizontalAlignment="Left" Margin="24,232,0,0" VerticalAlignment="Top" FontSize="14" Foreground="White"/>
+        <Button x:Name="Rasch" Content="Рассчитать" HorizontalAlignment="Left" Margin="77,330,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FFC1BDBD" Height="31" Width="72" Click="Rasch_Click"/>
+        <TextBox x:Name="Vivod" HorizontalAlignment="Left" Margin="575,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" Height="36" IsReadOnly="True"/>
+        <Label Content="Результат" HorizontalAlignment="Left" Margin="603,233,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="31"/>
+        <Button x:Name="Ochistka" Content="Очистить массив" HorizontalAlignment="Left" Margin="324,270,0,0" VerticalAlignment="Top" Height="29" Width="124" Click="Ochistka_Click"/>
+        <TextBox x:Name="Strok" HorizontalAlignment="Left" Height="36" Margin="152,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64"/>
+
+
+    </Grid>
+</Window>
